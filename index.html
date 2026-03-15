@@ -1,34 +1,70 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Pranav Instructs</title>
 
 <style>
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 margin:0;
 background:#f5f7fb;
 color:#333;
 }
 
-header{
+/* Sticky Navbar */
+
+nav{
+position:sticky;
+top:0;
 background:#111827;
-color:white;
-text-align:center;
-padding:30px;
-font-size:28px;
-font-weight:bold;
-letter-spacing:1px;
+z-index:1000;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:14px;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
 }
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+letter-spacing:0.5px;
+}
+
+nav a:hover{
+color:#60a5fa;
+}
+
+/* Banner */
+
+header{
+text-align:center;
+}
+
+.nav-banner{
+width:100%;
+max-height:200px;
+object-fit:cover;
+}
+
+/* Sections */
 
 section{
 max-width:1000px;
 margin:auto;
-padding:50px 20px;
+padding:60px 20px;
 }
 
 h2{
@@ -36,6 +72,8 @@ text-align:center;
 margin-bottom:30px;
 font-size:28px;
 }
+
+/* About */
 
 .about-container{
 text-align:center;
@@ -48,7 +86,7 @@ width:150px;
 height:150px;
 border-radius:50%;
 object-fit:cover;
-box-shadow:0 6px 15px rgba(0,0,0,0.2);
+box-shadow:0 6px 20px rgba(0,0,0,0.25);
 margin-bottom:20px;
 }
 
@@ -57,6 +95,8 @@ line-height:1.7;
 font-size:16px;
 }
 
+/* Video Grid */
+
 .video-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -64,16 +104,21 @@ gap:25px;
 margin-top:30px;
 }
 
+/* Animated Video Cards */
+
 .video-card{
 background:white;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 8px 20px rgba(0,0,0,0.12);
 padding:15px;
-transition:transform 0.2s ease;
+transition:transform 0.35s ease, box-shadow 0.35s ease, opacity 0.6s ease;
+opacity:0.95;
 }
 
 .video-card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 14px 30px rgba(0,0,0,0.18);
+opacity:1;
 }
 
 .video-card img{
@@ -101,14 +146,23 @@ margin-top:10px;
 border-radius:6px;
 }
 
+/* Work Section */
+
 .work-links{
 text-align:center;
 font-size:18px;
 }
 
+.work-row{
+margin:12px 0;
+}
+
+.orcid-text{
+color:green;
+font-weight:bold;
+}
+
 .work-links a{
-display:block;
-margin:10px;
 color:#2563eb;
 text-decoration:none;
 font-weight:bold;
@@ -117,6 +171,8 @@ font-weight:bold;
 .work-links a:hover{
 text-decoration:underline;
 }
+
+/* Footer */
 
 footer{
 text-align:center;
@@ -132,8 +188,17 @@ margin-top:40px;
 
 <body>
 
+<nav>
+
+<a href="#about">About</a> <a href="#courses">Courses</a> <a href="#work">My Work</a>
+
+</nav>
+
 <header>
-Pranav Instructs
+
+<img class="nav-banner"
+src="https://raw.githubusercontent.com/pranav-upd/pranav-upd.github.io/refs/heads/main/banner.png">
+
 </header>
 
 <section id="about">
@@ -142,7 +207,8 @@ Pranav Instructs
 
 <div class="about-container">
 
-<img class="profile-pic" src="https://yt3.googleusercontent.com/NlXd7Vtmp6bqyc6UBNCchOTp_xbFbGwhArlabcecbkwWiyqCI5LpUh5pypnUACR62O0xdqEELg=s160-c-k-c0x00ffffff-no-rj">
+<img class="profile-pic"
+src="https://raw.githubusercontent.com/pranav-upd/pranav-upd.github.io/refs/heads/main/631768b7f561e456bd9c4f81_pranav.png">
 
 <p class="description">
 
@@ -175,7 +241,7 @@ Video Title
 <iframe src="YOUTUBE_EMBED_URL"></iframe>
 
 <div class="video-desc">
-Video description goes here.
+Video description goes here
 </div>
 
 </div>
@@ -191,7 +257,7 @@ Video Title
 <iframe src="YOUTUBE_EMBED_URL"></iframe>
 
 <div class="video-desc">
-Video description goes here.
+Video description goes here
 </div>
 
 </div>
@@ -206,20 +272,28 @@ Video description goes here.
 
 <div class="work-links">
 
+<div class="work-row">
+<span class="orcid-text">ORCID</span> -
 <a href="https://orcid.org/0009-0008-8887-4349" target="_blank">
-ORCID Profile
+https://orcid.org/0009-0008-8887-4349
 </a>
+</div>
 
+<div class="work-row">
+<strong>GITHUB</strong> -
 <a href="https://github.com/pranav-upd" target="_blank">
-GitHub Profile
+https://github.com/pranav-upd
 </a>
+</div>
 
 </div>
 
 </section>
 
 <footer>
+
 © 2026 Pranav Instructs
+
 </footer>
 
 </body>
