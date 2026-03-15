@@ -47,16 +47,21 @@ nav a:hover{
 color:#60a5fa;
 }
 
-/* Banner */
+/* Hero Banner Background */
 
-header{
-text-align:center;
-}
-
-.nav-banner{
-width:100%;
-max-height:200px;
-object-fit:cover;
+.hero{
+height:260px;
+background-image:url("https://raw.githubusercontent.com/pranav-upd/pranav-upd.github.io/refs/heads/main/banner.png");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:36px;
+font-weight:bold;
+letter-spacing:1px;
+text-shadow:0 4px 12px rgba(0,0,0,0.6);
 }
 
 /* Sections */
@@ -111,14 +116,12 @@ background:white;
 border-radius:10px;
 box-shadow:0 8px 20px rgba(0,0,0,0.12);
 padding:15px;
-transition:transform 0.35s ease, box-shadow 0.35s ease, opacity 0.6s ease;
-opacity:0.95;
+transition:transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .video-card:hover{
 transform:translateY(-8px) scale(1.02);
 box-shadow:0 14px 30px rgba(0,0,0,0.18);
-opacity:1;
 }
 
 .video-card img{
@@ -146,7 +149,7 @@ margin-top:10px;
 border-radius:6px;
 }
 
-/* Work Section */
+/* Work */
 
 .work-links{
 text-align:center;
@@ -194,12 +197,11 @@ margin-top:40px;
 
 </nav>
 
-<header>
+<div class="hero">
 
-<img class="nav-banner"
-src="https://raw.githubusercontent.com/pranav-upd/pranav-upd.github.io/refs/heads/main/banner.png">
+Pranav Instructs
 
-</header>
+</div>
 
 <section id="about">
 
@@ -229,22 +231,6 @@ Whether you are a student, a self learner, or someone exploring new ideas, Prana
 <h2>My Youtube Courses</h2>
 
 <div class="video-grid">
-
-<div id="yt_vid" class="video-card">
-
-<img src="VIDEO_THUMBNAIL_URL">
-
-<div class="video-title">
-Video Title
-</div>
-
-<iframe src="YOUTUBE_EMBED_URL"></iframe>
-
-<div class="video-desc">
-Video description goes here
-</div>
-
-</div>
 
 <div id="yt_vid" class="video-card">
 
